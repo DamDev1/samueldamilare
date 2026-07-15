@@ -11,12 +11,6 @@ export default function Hero() {
             Hey, <span>there</span>
           </h2>
 
-          <div className="hero-badge">
-            <span className="hero-badge-dot"></span>
-            <span className="hero-badge-text">
-              Available for new opportunities
-            </span>
-          </div>
 
           <div className="hero-name">
             <p className="hero-name-label">I Am</p>
@@ -29,9 +23,9 @@ export default function Hero() {
 
           <div className="hero-role">
             <p className="hero-role-text">
-              FRONTEND
+              SOFTWARE
               <br />
-              DEVELOPER
+              ENGINEER
             </p>
           </div>
 
