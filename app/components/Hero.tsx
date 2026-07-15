@@ -78,7 +78,7 @@ export default function Hero() {
             <div className="hero-float-card card-top">
               <p className="float-card-label">Experience</p>
               <p className="float-card-value">
-                <span>3+</span> Years
+                <span>4+</span> Years
               </p>
             </div>
 

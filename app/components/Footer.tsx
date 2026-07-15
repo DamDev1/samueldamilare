@@ -23,7 +23,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/samueldamilare"
+            href="https://www.linkedin.com/in/samueldamilare-dev?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-link"
