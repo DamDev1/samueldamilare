@@ -1,4 +1,32 @@
 export default function Works() {
+  // You can update these links to your actual project URLs to automatically fetch screenshots!
+  const projects = [
+    {
+      title: "Nubcast",
+      desc: "An AI-powered casting platform and mobile app for actors to practice monologues, improve accents, and connect with producers.",
+      tags: ["Next.js", "Tailwind", "React Native", "TypeScript"],
+      link: "https://www.trynubcast.com",
+    },
+    {
+      title: "Al Falah Trading",
+      desc: "A comprehensive point-of-sale and business management dashboard designed to seamlessly record sales data and generate printable receipts.",
+      tags: ["TypeScript", "Tailwind", "Next.js"],
+      link: "https://al-falah-trading.ventures/admin/dashboard",
+    },
+    {
+      title: "Paypaxe",
+      desc: "A comprehensive fintech application allowing users to track expenses, set savings goals, join Ajo/Esusu circles, and manage funds via a digital wallet.",
+      tags: ["React", "React Native", "Fintech"],
+      link: "https://paypaxe.com",
+    },
+    {
+      title: "Havre de Grace Schools",
+      desc: "A comprehensive educational platform providing essential information, resources, and communication tools for students, parents, and faculty.",
+      tags: ["React", "Education", "Web Design"],
+      link: "https://havredegraceschools.com/", 
+    },
+  ];
+
   return (
     <section className="works-section" id="works">
       <div className="section-header">
@@ -11,169 +39,83 @@ export default function Works() {
       </h2>
 
       <div className="works-grid">
-        <div className="work-card">
-          <div className="work-card-image-wrapper">
-            <div
-              className="work-card-image"
-              style={{
-                height: 240,
-                background:
-                  "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span
-                style={{
-                  color: "#fff",
-                  fontSize: "2rem",
-                  fontWeight: 800,
-                  letterSpacing: -1,
-                  opacity: 0.3,
-                }}
-              >
-                E-Commerce Platform
-              </span>
+        {projects.map((project, index) => (
+          <div className="work-card" key={index}>
+            <div className="work-card-image-wrapper">
+              {project.link ? (
+                <img
+                  src={`https://api.microlink.io/?url=${encodeURIComponent(
+                    project.link
+                  )}&screenshot=true&meta=false&embed=screenshot.url`}
+                  alt={`${project.title} Preview`}
+                  className="work-card-image"
+                  style={{
+                    height: 240,
+                    width: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                  loading="lazy"
+                />
+              ) : (
+                <div
+                  className="work-card-image"
+                  style={{
+                    height: 240,
+                    background:
+                      "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#fff",
+                      fontSize: "2rem",
+                      fontWeight: 800,
+                      letterSpacing: -1,
+                      opacity: 0.3,
+                    }}
+                  >
+                    {project.title}
+                  </span>
+                </div>
+              )}
+              <div className="work-card-overlay"></div>
             </div>
-            <div className="work-card-overlay"></div>
-          </div>
-          <div className="work-card-info">
-            <div className="work-card-tags">
-              <span className="work-tag">React</span>
-              <span className="work-tag">Next.js</span>
-              <span className="work-tag">Stripe</span>
+            <div className="work-card-info">
+              <div className="work-card-tags">
+                {project.tags.map((tag, tagIndex) => (
+                  <span className="work-tag" key={tagIndex}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 className="work-card-title">{project.title}</h3>
+              <p className="work-card-desc">{project.desc}</p>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    marginTop: "1.25rem",
+                    color: "var(--accent)",
+                    fontWeight: 600,
+                    fontSize: "0.9rem",
+                    textDecoration: "none",
+                    position: "relative",
+                    zIndex: 10,
+                  }}
+                >
+                  Visit Website &rarr;
+                </a>
+              )}
             </div>
-            <h3 className="work-card-title">E-Commerce Platform</h3>
-            <p className="work-card-desc">
-              A full-featured e-commerce platform with cart management, secure
-              payments, and an admin dashboard.
-            </p>
           </div>
-        </div>
-
-        <div className="work-card">
-          <div className="work-card-image-wrapper">
-            <div
-              className="work-card-image"
-              style={{
-                height: 240,
-                background:
-                  "linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #60a5fa 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span
-                style={{
-                  color: "#fff",
-                  fontSize: "2rem",
-                  fontWeight: 800,
-                  letterSpacing: -1,
-                  opacity: 0.3,
-                }}
-              >
-                SaaS Dashboard
-              </span>
-            </div>
-            <div className="work-card-overlay"></div>
-          </div>
-          <div className="work-card-info">
-            <div className="work-card-tags">
-              <span className="work-tag">TypeScript</span>
-              <span className="work-tag">Tailwind</span>
-              <span className="work-tag">Chart.js</span>
-            </div>
-            <h3 className="work-card-title">SaaS Analytics Dashboard</h3>
-            <p className="work-card-desc">
-              A real-time analytics dashboard with interactive charts, data
-              visualization, and team collaboration features.
-            </p>
-          </div>
-        </div>
-
-        <div className="work-card">
-          <div className="work-card-image-wrapper">
-            <div
-              className="work-card-image"
-              style={{
-                height: 240,
-                background:
-                  "linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #bfdbfe 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span
-                style={{
-                  color: "#fff",
-                  fontSize: "2rem",
-                  fontWeight: 800,
-                  letterSpacing: -1,
-                  opacity: 0.3,
-                }}
-              >
-                Social App
-              </span>
-            </div>
-            <div className="work-card-overlay"></div>
-          </div>
-          <div className="work-card-info">
-            <div className="work-card-tags">
-              <span className="work-tag">React</span>
-              <span className="work-tag">Node.js</span>
-              <span className="work-tag">MongoDB</span>
-            </div>
-            <h3 className="work-card-title">Social Media Application</h3>
-            <p className="work-card-desc">
-              A feature-rich social platform with real-time messaging, post
-              feeds, and user authentication.
-            </p>
-          </div>
-        </div>
-
-        <div className="work-card">
-          <div className="work-card-image-wrapper">
-            <div
-              className="work-card-image"
-              style={{
-                height: 240,
-                background:
-                  "linear-gradient(135deg, #0c1524 0%, #1d4ed8 50%, #93c5fd 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span
-                style={{
-                  color: "#fff",
-                  fontSize: "2rem",
-                  fontWeight: 800,
-                  letterSpacing: -1,
-                  opacity: 0.3,
-                }}
-              >
-                Portfolio CMS
-              </span>
-            </div>
-            <div className="work-card-overlay"></div>
-          </div>
-          <div className="work-card-info">
-            <div className="work-card-tags">
-              <span className="work-tag">Next.js</span>
-              <span className="work-tag">Sanity</span>
-              <span className="work-tag">Vercel</span>
-            </div>
-            <h3 className="work-card-title">Portfolio CMS</h3>
-            <p className="work-card-desc">
-              A headless CMS-powered portfolio with dynamic content management,
-              blog integration, and blazing-fast performance.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

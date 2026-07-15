@@ -42,10 +42,10 @@ export default function Services() {
 
           <div className="service-card">
             <div className="service-icon">📱</div>
-            <h3 className="service-name">Responsive Design</h3>
+            <h3 className="service-name">Mobile App Development</h3>
             <p className="service-desc">
-              Creating seamless experiences across all devices and screen sizes.
-              Mobile-first approach ensuring your app looks great everywhere.
+              Building native and cross-platform mobile applications. Delivering
+              smooth, high-performance mobile experiences for both iOS and Android.
             </p>
           </div>
 

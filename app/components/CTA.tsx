@@ -30,7 +30,7 @@ export default function CTA() {
               </svg>
             </a>
             <a
-              href="https://github.com/samueldamilare"
+              href="https://github.com/damdev1"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta-secondary"

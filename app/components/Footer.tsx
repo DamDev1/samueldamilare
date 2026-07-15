@@ -12,7 +12,7 @@ export default function Footer() {
 
         <div className="footer-socials">
           <a
-            href="https://github.com/samueldamilare"
+            href="https://github.com/damdev1"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-link"

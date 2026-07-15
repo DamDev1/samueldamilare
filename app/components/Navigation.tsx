@@ -21,8 +21,8 @@ export default function Navigation() {
         <li>
           <a href="#testimonials">Testimonial</a>
         </li>
-        <li>
-          <a href="#contact" className="nav-contact-btn">
+        <li  className="nav-contact-btn">
+          <a href="#contact">
             Contact
           </a>
         </li>
